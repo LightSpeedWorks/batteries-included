@@ -1,0 +1,22 @@
+{
+  "name": "batteries-included",
+  "version": "0.0.0",
+  "description": "batteries included",
+  "main": "lib/batteries-included.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "mocha": ">=2.2.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "LightSpeedWorks/batteries-included"
+  },
+  "keywords": [
+    "batteries",
+    "included"
+  ],
+  "author": "LightSpeedC",
+  "license": "MIT"
+}
