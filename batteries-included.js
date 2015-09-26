@@ -101,6 +101,13 @@ this.batteriesIncluded = function () {
       };
     };
 
+  // Array.prototype.forEach for ie8
+  if (!Array.prototype.hasOwnProperty('map'))
+    Array.prototype.forEach = function forEach(fn, ctx) {
+      for (var i = 0, n = this.length; i < n; ++i)
+        fn.call(ctx, this[i], i, this);
+    };
+
   // Array.prototype.map for ie8
   if (!Array.prototype.hasOwnProperty('map'))
     Array.prototype.map = function map(fn, ctx) {
