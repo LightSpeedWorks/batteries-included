@@ -1,13 +1,13 @@
 {
   "name": "batteries-included",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "batteries included",
-  "main": "lib/batteries-included.js",
+  "main": "batteries-included.js",
   "scripts": {
     "test": "mocha"
   },
   "devDependencies": {
-    "mocha": ">=2.2.5"
+    "mocha": ">=2.3.3"
   },
   "repository": {
     "type": "git",
