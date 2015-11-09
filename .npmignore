@@ -1,0 +1,9 @@
+.git*
+.npm*
+examples/
+lib/
+test/
+work/
+draft/
+tools/
+images/
