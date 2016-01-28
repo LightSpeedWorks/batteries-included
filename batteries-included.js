@@ -126,13 +126,27 @@ this.batteriesIncluded = function () {
 			return res;
 		};
 
-	// Object.keys for ie6
+	// Array.prototype.reduce for ie8
+	if (!Array.prototype.reduce)
+		Array.prototype.reduce = function reduce(fn, val) {
+			var i = 0;
+			if (arguments.length > 1) val = arguments[i++];
+			for (var n = this.length; i < n; ++i)
+				val = fn(val, this[i], i, this);
+			return val;
+		};
+
+	// Object.keys for ie8
 	if (!Object.keys)
 		Object.keys = function keys(obj) {
 			var props = [];
 			for (var prop in obj) props.push(prop);
 			return props;
 		};
+
+	// Object.getOwnPropertyNames for ie8
+	if (!Object.getOwnPropertyNames)
+		Object.getOwnPropertyNames = Object.keys;
 
 	batteriesIncluded.isPromise = isPromise;
 	batteriesIncluded.isIterator = isIterator;
