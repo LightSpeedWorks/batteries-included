@@ -140,7 +140,9 @@ this.batteriesIncluded = function () {
 	if (!Object.keys)
 		Object.keys = function keys(obj) {
 			var props = [];
-			for (var prop in obj) props.push(prop);
+			for (var prop in obj)
+				if (obj.hasOwnProperty(prop))
+					props.push(prop);
 			return props;
 		};
 
