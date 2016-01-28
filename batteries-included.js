@@ -130,7 +130,7 @@ this.batteriesIncluded = function () {
 	if (!Array.prototype.reduce)
 		Array.prototype.reduce = function reduce(fn, val) {
 			var i = 0;
-			if (arguments.length > 1) val = arguments[i++];
+			if (arguments.length <= 1) val = this[i++];
 			for (var n = this.length; i < n; ++i)
 				val = fn(val, this[i], i, this);
 			return val;
