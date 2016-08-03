@@ -136,6 +136,15 @@ this.batteriesIncluded = function () {
 			return val;
 		};
 
+	// Array.from
+	if (!Array.from)
+		Array.from = function from(list) {
+			var arr = new Array(list.length);
+			for (var i = 0, n = list.length; i < n; ++i)
+				arr[i] = list[i];
+			return arr;
+		};
+
 	// Object.keys for ie8
 	if (!Object.keys)
 		Object.keys = function keys(obj) {
