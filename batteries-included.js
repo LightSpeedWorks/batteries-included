@@ -159,6 +159,18 @@ this.batteriesIncluded = function () {
 	if (!Object.getOwnPropertyNames)
 		Object.getOwnPropertyNames = Object.keys;
 
+	// String.prototype.startsWith for ie
+	if (!String.prototype.startsWith)
+		String.prototype.startsWith = function startsWith(str) {
+			return this.substr(0, str.length) === str;
+		};
+
+	// String.prototype.endsWith for ie
+	if (!String.prototype.endsWith)
+		String.prototype.endsWith = function endsWith(str) {
+			return this.substr(-str.length) === str;
+		};
+
 	batteriesIncluded.isPromise = isPromise;
 	batteriesIncluded.isIterator = isIterator;
 	batteriesIncluded.isIterable = isIterable;
