@@ -1,6 +1,6 @@
 {
   "name": "batteries-included",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "batteries included",
   "main": "batteries-included.js",
   "scripts": {
